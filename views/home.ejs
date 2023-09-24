@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+   <link rel="stylesheet" href="/css/style1.css">
+</head>
+<body>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <a href="/products/<%= product.id %>"><%= product.name %></a>
+                <img src="/images/<%= product.name.toLowerCase().replace(/\s+/g, '-') %>.jpg" alt="<%= product.name %>">
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
